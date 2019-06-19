@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CompleteFinancialReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ce639990-ed35-426a-94ce-08fec9ade36b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="imeKorisnika" class="java.lang.String"/>
+	<parameter name="trenutnoStanje" class="java.lang.Double"/>
+	<parameter name="profitOdTransakcija" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="prodajaKupovina" class="java.lang.String"/>
+	<field name="prodavacKupac" class="java.lang.String"/>
+	<field name="vrednost" class="java.lang.Double"/>
+	<field name="izlog" class="java.lang.String"/>
+	<field name="predmet" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="118" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="10" y="10" width="100" height="30" uuid="8890d330-1a56-4c9a-937f-068c904657f3"/>
+				<text><![CDATA[Ime klijenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="40" width="100" height="30" uuid="23c4f9d0-8f2d-458d-9e3b-200f835ff3cf"/>
+				<text><![CDATA[Trenutno stanje racuna]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="70" width="100" height="30" uuid="384e84cd-114d-4622-a5cc-e9fbed96793e"/>
+				<text><![CDATA[Profit od transakcija]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="10" width="100" height="30" uuid="6812cfea-5c36-4a4c-b4f3-9e048f260467"/>
+				<textFieldExpression><![CDATA[$P{imeKorisnika}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="40" width="100" height="30" uuid="c4b4ed06-aacd-4f56-b033-2005d0abdc69"/>
+				<textFieldExpression><![CDATA[$P{trenutnoStanje}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="70" width="100" height="30" uuid="d6b0b7b3-6d5a-4c4f-a63b-ccf657d1b5da"/>
+				<textFieldExpression><![CDATA[$P{profitOdTransakcija}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="24" width="100" height="30" uuid="e16bbacc-aee1-4fd6-8fc1-47c60c853b4e"/>
+				<text><![CDATA[Prodaja/Kupovina]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="24" width="100" height="30" uuid="600e89bb-7a21-4844-b85f-e30320b84876"/>
+				<text><![CDATA[Prodavac/Kupac]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="24" width="100" height="30" uuid="f4a89f7a-a5ac-4ce4-8e93-ec72a410daa5"/>
+				<text><![CDATA[Izlog]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="24" width="100" height="30" uuid="e6e57dbd-1eff-4f46-aa9d-8ed23c547901"/>
+				<text><![CDATA[Vrednost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="24" width="100" height="30" uuid="a3a74a2d-e51b-434a-b757-507a176bf08b"/>
+				<text><![CDATA[Predmet]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="420" y="0" width="100" height="30" uuid="043df466-895b-458f-a86a-ef05327bfb67"/>
+				<textFieldExpression><![CDATA[$F{vrednost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="0" width="100" height="30" uuid="0ef6fda5-184a-48d2-9cfd-ee328621f983"/>
+				<textFieldExpression><![CDATA[$F{prodajaKupovina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="100" height="30" uuid="c4c80e04-2208-4f2d-a1ff-bd25a51e85ae"/>
+				<textFieldExpression><![CDATA[$F{prodavacKupac}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="100" height="30" uuid="abc4dba2-70ee-4424-816e-253ddc6245db"/>
+				<textFieldExpression><![CDATA[$F{izlog}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="100" height="30" uuid="46178209-c8fe-47e1-a5c0-a1758e8562fe"/>
+				<textFieldExpression><![CDATA[$F{predmet}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="57" splitType="Stretch">
+			<textField>
+				<reportElement x="450" y="20" width="100" height="30" uuid="1292fa07-648d-4a25-8116-1b0c8946abac"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
